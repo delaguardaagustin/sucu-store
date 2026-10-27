@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://delaguardaagustin.github.io/sucu-store/sitemap.xml
+Sitemap: https://sucustore.cl/sitemap.xml
