@@ -133,11 +133,11 @@ section{padding:96px 0}
 .colores{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:6px}
 .colores span{display:inline-flex;align-items:center;gap:8px;padding:9px 14px 9px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:500;font-size:.92rem}
 .colores i{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.18)}
-.galeria-j{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:44px}
-.galeria-j img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:0 20px 40px -28px rgba(34,48,29,.6)}
-@media (max-width:1000px){.galeria-j{grid-template-columns:repeat(4,1fr)}}
+.galeria-j{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:44px;align-items:start}
+.galeria-j img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:0 20px 40px -28px rgba(34,48,29,.6)}
+@media (max-width:1000px){.galeria-j{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:700px){.galeria-j{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));scrollbar-width:none}
-  .galeria-j::-webkit-scrollbar{display:none}.galeria-j img{flex:0 0 62%;scroll-snap-align:center}}
+  .galeria-j::-webkit-scrollbar{display:none}.galeria-j img{flex:0 0 62%;width:62%;max-width:62%;height:auto;aspect-ratio:3/4;align-self:flex-start;scroll-snap-align:center}}
 /* personaliza */
 .pers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .pers div{background:var(--tarjeta);border:1px solid var(--borde-rosa);border-radius:18px;padding:22px}
@@ -374,7 +374,7 @@ form.f label.acepto a{color:var(--verde)}
     <a class="btn btn-wa" href="https://wa.me/56982474576?text=Hola%20Sucu%20Store%20%F0%9F%AA%B4%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20consultar%20la%20disponibilidad%20de%20mini%20jardines." target="_blank" rel="noopener">Consultar disponibilidad por WhatsApp</a>
   </div>
 </div>
-  <div class="galeria-j aparece" aria-label="Fotos de mini jardines"><img src="assets/jardin-01.jpg" alt="Mini jardín en macetero octagonal morado, con una pareja de muñequitos sobre pasto y cinta dorada" loading="lazy" width="750" height="1000"><img src="assets/jardin-02.jpg" alt="Mini jardín en macetero octagonal morado, con un arbolito, una pareja de muñequitos y cinta rosada" loading="lazy" width="750" height="1000"><img src="assets/jardin-03.jpg" alt="Mini jardín en macetero octagonal turquesa, con el cartel «¡Te amo hoy y siempre!» y una pareja de muñequitos" loading="lazy" width="750" height="1000"><img src="assets/jardin-04.jpg" alt="Mini jardín en macetero octagonal rojo, con un versículo en un cartel y una pareja de muñequitos" loading="lazy" width="750" height="1000"><img src="assets/jardin-05.jpg" alt="Mini jardín en macetero octagonal morado, con un mensaje de amor en un cartel y una pareja de muñequitos" loading="lazy" width="750" height="1000"><img src="assets/jardin-06.jpg" alt="Mini jardín en macetero octagonal rojo, con dos muñequitos sobre lunas y cinta dorada" loading="lazy" width="750" height="1000"><img src="assets/jardin-07.jpg" alt="Suculenta en macetero cuadrado blanco con tarjeta del Día de la Madre" loading="lazy" width="750" height="1000"></div>
+  <div class="galeria-j aparece" aria-label="Fotos de mini jardines"><img src="assets/jardin-01.jpg" alt="Mini jardín en macetero octagonal morado, con una pareja de muñequitos sobre pasto y cinta dorada" loading="lazy" width="750" height="1000"><img src="assets/jardin-02.jpg" alt="Mini jardín en macetero octagonal morado, con un arbolito, una pareja de muñequitos y cinta rosada" loading="lazy" width="750" height="1000"><img src="assets/jardin-03.jpg" alt="Mini jardín en macetero octagonal turquesa, con el cartel «¡Te amo hoy y siempre!» y una pareja de muñequitos" loading="lazy" width="750" height="1000"><img src="assets/jardin-04.jpg" alt="Mini jardín en macetero octagonal rojo, con un versículo en un cartel y una pareja de muñequitos" loading="lazy" width="750" height="1000"><img src="assets/jardin-05.jpg" alt="Mini jardín en macetero octagonal morado, con un mensaje de amor en un cartel y una pareja de muñequitos" loading="lazy" width="750" height="1000"><img src="assets/jardin-06.jpg" alt="Mini jardín en macetero octagonal rojo, con dos muñequitos sobre lunas y cinta dorada" loading="lazy" width="750" height="1000"></div>
 </div></section>
 <section class="pedido" id="pedido"><div class="wrap">
   <div class="cab aparece"><div><span class="ojo">Así de fácil</span><h2>Tu pedido en <em>3 pasos</em></h2></div><p>Sin formularios: tu pedido llega escrito a nuestro WhatsApp y coordinamos contigo los detalles.</p></div>
