@@ -136,8 +136,8 @@ section{padding:96px 0}
 .galeria-j{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:44px;align-items:start}
 .galeria-j img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:18px;box-shadow:0 20px 40px -28px rgba(34,48,29,.6)}
 @media (max-width:1000px){.galeria-j{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:700px){.galeria-j{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));scrollbar-width:none}
-  .galeria-j::-webkit-scrollbar{display:none}.galeria-j img{flex:0 0 62%;width:62%;max-width:62%;height:auto;aspect-ratio:3/4;align-self:flex-start;scroll-snap-align:center}}
+/* celular: fotos completas de a dos (Dafny pidió que se vean enteras, 22-11) */
+@media (max-width:700px){.galeria-j{grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}.galeria-j img{border-radius:14px}}
 /* personaliza */
 .pers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .pers div{background:var(--tarjeta);border:1px solid var(--borde-rosa);border-radius:18px;padding:22px}
@@ -254,7 +254,7 @@ body.con-carro .fab{display:none}body.con-carro #quien-hizo-btn{bottom:92px}body
 /* celular: secciones largas en fila que se desliza, para que la página no sea tan larga */
 @media (max-width:700px){
   section{padding:64px 0}
-  .ocs,.vids{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));scrollbar-width:none}
+  .ocs,.vids{display:flex;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));scrollbar-width:none}
   .ocs::-webkit-scrollbar,.vids::-webkit-scrollbar{display:none}
   .oc{flex:0 0 78%;aspect-ratio:4/5;scroll-snap-align:center}
   .vid{flex:0 0 66%;scroll-snap-align:center}
