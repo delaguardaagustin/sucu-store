@@ -4,3 +4,5 @@ material/
 _hoja.jpg
 cotizacion/
 a_dominio.py
+# presupuestos con datos del cliente: nunca al repositorio público
+presupuesto/
