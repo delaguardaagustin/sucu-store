@@ -1,0 +1,76 @@
+/* Temporada navideña de Sucu Store (la dueña lo aprobó el 22-11-2026).
+   Todo vive bajo html.navidad: navidad.js pone esa clase solo hasta el 06-01-2027.
+   Pasada la fecha la página vuelve sola a su diseño de siempre. Para verla fuera de fecha: ?navidad=1 */
+:root{--nv-pino:#24493a;--nv-pino-2:#1b382c;--nv-rojo:#b3313f;--nv-rojo-2:#8c2532;--nv-oro:#d9b25f;--nv-oro-2:#f2dca4}
+
+/* Guirnalda de luces bajo la cabecera */
+.nv-guirnalda{position:absolute;left:0;right:0;bottom:-19px;height:26px;pointer-events:none;z-index:2}
+.nv-guirnalda svg{width:100%;height:26px;overflow:visible;display:block}
+.nv-guirnalda .cable{fill:none;stroke:#3b3027;stroke-width:1.4;opacity:.55}
+.nv-guirnalda .foco{transform-box:fill-box;transform-origin:center top;animation:nv-foco 2.4s ease-in-out infinite}
+.nv-guirnalda .f1{fill:#d8434e;filter:drop-shadow(0 0 4px rgba(216,67,78,.85))}
+.nv-guirnalda .f2{fill:#e9be55;filter:drop-shadow(0 0 4px rgba(233,190,85,.9))}
+.nv-guirnalda .f3{fill:#3f9a6e;filter:drop-shadow(0 0 4px rgba(63,154,110,.85))}
+.nv-guirnalda .f4{fill:#fff6dc;filter:drop-shadow(0 0 5px rgba(255,240,200,.95))}
+.nv-guirnalda .casquillo{fill:#5d5046}
+@keyframes nv-foco{0%,100%{opacity:1}50%{opacity:.38}}
+.navidad .top nav{z-index:3}
+
+/* Portada: nieve, adornos colgando y sello de temporada */
+.nv-nieve{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.navidad .hero .wrap{z-index:2}
+.nv-adornos{position:absolute;top:0;right:3%;display:flex;gap:26px;pointer-events:none;z-index:3}
+.nv-adorno{display:block;transform-origin:50% 0;animation:nv-vaiven 5.5s ease-in-out infinite}
+.nv-adorno:nth-child(2){animation-duration:6.4s;animation-delay:-2s}
+.nv-adorno:nth-child(3){animation-duration:4.9s;animation-delay:-1s}
+.nv-adorno svg{width:58px;height:auto;overflow:visible;display:block}
+@keyframes nv-vaiven{0%,100%{transform:rotate(3.5deg)}50%{transform:rotate(-3.5deg)}}
+.nv-sello{display:inline-flex;align-items:center;gap:9px;margin-bottom:16px;padding:8px 16px 8px 12px;border-radius:999px;
+  background:var(--nv-rojo);color:#fff;font:700 .9rem/1 var(--font);letter-spacing:.02em;box-shadow:0 10px 22px -14px rgba(140,37,50,.9)}
+.nv-sello svg{width:18px;height:18px;color:var(--nv-oro-2);animation:nv-brillo 2.6s ease-in-out infinite}
+@keyframes nv-brillo{0%,100%{transform:scale(1) rotate(0);opacity:1}50%{transform:scale(.82) rotate(18deg);opacity:.75}}
+
+/* Botones principales con destello dorado */
+.navidad .hero .btn-p,.navidad .nv-saludo .btn-p{position:relative;overflow:hidden}
+.navidad .hero .btn-p::after,.navidad .nv-saludo .btn-p::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:nv-destello 4.5s ease-in-out infinite}
+@keyframes nv-destello{0%,62%{left:-60%}100%{left:130%}}
+
+/* Banda «Esta Navidad, regala vida» antes del catálogo */
+.nv-saludo{position:relative;overflow:hidden;background:radial-gradient(120% 140% at 50% 0%,#2d5a47 0%,var(--nv-pino) 45%,var(--nv-pino-2) 100%);color:#f6ecd6;padding:76px 0 82px;text-align:center}
+.nv-saludo .wrap{position:relative;z-index:1}
+.nv-saludo .estrella-grande{width:56px;height:56px;margin:0 auto 18px;color:var(--nv-oro);filter:drop-shadow(0 0 14px rgba(217,178,95,.7));animation:nv-brillo 3.2s ease-in-out infinite;display:block}
+.nv-saludo h2{color:#fff;text-wrap:balance}
+.nv-saludo h2 em{color:var(--nv-oro-2)}
+.nv-saludo p{margin:18px auto 0;max-width:56ch;font-size:1.12rem;color:#e9dfc9}
+.nv-saludo .ideas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.nv-saludo .ideas span{padding:9px 14px;border-radius:999px;background:rgba(255,246,220,.1);border:1px solid rgba(242,220,164,.35);font-weight:500;font-size:.92rem}
+.nv-saludo .acciones{justify-content:center;margin-top:30px}
+.nv-saludo .btn-p{background:var(--nv-rojo);box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}.nv-saludo .btn-p:hover{background:var(--nv-rojo-2)}
+.nv-saludo .btn-s{border-color:rgba(255,255,255,.75);color:#fff}.nv-saludo .btn-s:hover{background:#fff;color:var(--nv-pino-2)}
+.nv-saludo .puntos{position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:radial-gradient(circle,rgba(255,246,220,.55) 1.2px,transparent 1.6px),radial-gradient(circle,rgba(255,246,220,.3) 1px,transparent 1.4px);
+  background-size:84px 84px,53px 53px;background-position:0 0,26px 31px;animation:nv-caer 26s linear infinite}
+@keyframes nv-caer{to{background-position:0 840px,26px 561px}}
+
+/* Pie */
+.nv-pie-saludo{display:inline-flex;align-items:center;gap:7px;color:var(--nv-oro-2)}
+.nv-pie-saludo svg{width:15px;height:15px;color:var(--nv-oro)}
+
+/* escritorio: dos adornos en el margen derecho, sin tapar el recuadro de L'Oréal */
+@media (min-width:901px){.nv-adornos{right:10px;gap:12px}.nv-adorno:nth-child(1){display:none}}
+@media (max-width:600px){.nv-saludo .ideas{gap:8px}.nv-saludo .ideas span{font-size:.84rem;padding:8px 12px}}
+@media (max-width:900px){
+  .nv-adornos{right:2%;gap:14px}
+  .nv-adorno svg{width:42px}
+  .nv-adorno:nth-child(3){display:none}
+  .nv-saludo{padding:60px 0 64px}
+}
+@media (max-width:600px){
+  .nv-adorno:nth-child(2){display:none}
+  .nv-adorno svg{width:34px}
+}
+@media (prefers-reduced-motion:reduce){
+  .navidad *,.navidad *::before,.navidad *::after{animation:none!important}
+  .navidad .hero .btn-p::after,.navidad .nv-saludo .btn-p::after{display:none}
+}
