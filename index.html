@@ -583,7 +583,7 @@ pintar();
 /* animaciones al bajar y videos que se reproducen solos al verse */
 const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('si'); io.unobserve(x.target); } }), {threshold: .12});
 document.querySelectorAll('.aparece').forEach(el => io.observe(el));
-const vio = new IntersectionObserver(es => es.forEach(x => { const vd = x.target; if (x.isIntersecting) { vd.preload = 'auto'; vd.play().catch(()=>{}); } else vd.pause(); }), {threshold: .4});
+const vio = new IntersectionObserver(es => es.forEach(x => { const vd = x.target; if (x.isIntersecting) { vd.play().catch(()=>{}); } else vd.pause(); }), {threshold: .4});
 document.querySelectorAll('.vid video, .emp-fotos video').forEach(vd => vio.observe(vd));
 </script>
 <script id="mm-sc">
